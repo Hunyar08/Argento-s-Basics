@@ -1,0 +1,17 @@
+{
+"companyName": "Huney",
+"productName": "Argento's Basics",
+"productVersion": "1.4.3",
+"dataUrl": "ARGENTO.HTML.data.unityweb",
+"wasmCodeUrl": "ARGENTO.HTML.wasm.code.unityweb",
+"wasmFrameworkUrl": "ARGENTO.HTML.wasm.framework.unityweb",
+"wasmSymbolsUrl": "ARGENTO.HTML.wasm.symbols.unityweb",
+"graphicsAPI": ["WebGL 2.0","WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#000000",
+"cacheControl": {"default": "must-revalidate"},
+"developmentBuild": false,
+"multithreading": false,
+"unityVersion": "2019.2.8f1"
+}
