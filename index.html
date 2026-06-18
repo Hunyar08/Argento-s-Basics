@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Argento's Basics</title>
+
+    <link rel="stylesheet" href="TemplateData/style.css">
+
+    <script src="TemplateData/UnityProgress.js"></script>
+    <script src="Build/UnityLoader.js"></script>
+
+    <script>
+        var gameInstance = UnityLoader.instantiate(
+            "gameContainer",
+            "Build/ARGENTOHTML.json",
+            {
+                onProgress: UnityProgress
+            }
+        );
+    </script>
+</head>
+
+<body style="margin:0">
+
+<div class="webgl-content">
+    <div id="gameContainer" style="width:960px;height:600px;margin:auto;"></div>
+</div>
+
+</body>
+</html>
