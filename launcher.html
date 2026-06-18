@@ -1,14 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Argento's Basics</title>
+
+    <link rel="stylesheet" href="Build/TemplateData/style.css">
+
+    <script>
+    window.fileMergerConfig = {
+        files: [
+            {
+                name: "ARGENTO.HTML.data.unityweb",
+                parts: 3
+            }
+        ],
+        basePath: "https://hunyar08.github.io/Argento-s-Basics/Build/",
+        debug: true
+    };
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@main/merge.js"></script>
+
+    <script src="Build/TemplateData/UnityProgress.js"></script>
+
+    <script src="Build/UnityLoader.js"></script>
+
+</head>
+
+<body style="margin:0">
+
+<div class="webgl-content">
+
+    <div id="unityContainer" style="
+        width:960px;
+        height:600px;
+        padding:0;
+        margin:0;
+        background:#000;
+    ">
+
+        <div id="gameContainer"
+        style="
+        width:960px;
+        height:600px;
+        margin:auto;
+        ">
+        </div>
+
+    </div>
+
+</div>
+
+
 <script>
-window.fileMergerConfig = {
-  files: [
-    { 
-      name: "ARGENTO.HTML.data.unityweb",
-      parts: 3
+
+var gameInstance = UnityLoader.instantiate(
+    "gameContainer",
+    "Build/ARGENTOHTML.json",
+    {
+        onProgress: UnityProgress,
+        Module: {
+            onRuntimeInitialized: function () {
+                UnityProgress(gameInstance, "complete");
+            }
+        }
     }
-  ],
-  basePath: "Build/",
-  debug: true
-};
+);
+
 </script>
 
-<script src="https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@main/merge.js"></script>
+
+</body>
+</html>
